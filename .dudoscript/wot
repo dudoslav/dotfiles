@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Starting WoT using Sekt"
+sekt bottle start wot &
+read
+echo 'Killing Wot using killall'
+killall worldoftanks.ex
+echo 'WoT killed'

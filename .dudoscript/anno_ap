@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo 'Starting AP for ANNO 1404 Venice Multiplayer'
+
+NET_IF=wlp0s20u2u1
+AP_IF=wlp1s0
+
+AP_NAME=anno_ap
+AP_PSWD=dudoiscool
+
+nmcli d disconnect $NET_IF
+nmcli d disconnect $AP_IF
+nmcli d connect $NET_IF
+
+echo "Creating AP name: '$AP_NAME'password: '$AP_PSWD'"
+sudo create_ap $AP_IF $NET_IF $AP_NAME $AP_PSWD
+
+nmcli d disconnect $NET_IF
+nmcli d disconnect $AP_IF
+nmcli d connect $AP_IF
