@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd ~/.xor && sudo su -c 'clear; ip a; bash'

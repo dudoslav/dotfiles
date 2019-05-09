@@ -1,0 +1,8 @@
+#!/bin/bash
+
+alias e="$EDITOR"
+alias ls='exa'
+alias less='bat'
+alias o='xdg-open'
+
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
