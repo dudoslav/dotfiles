@@ -18,7 +18,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc' 
 call plug#end()
 
-colorscheme Crystallite
+colorscheme morning
 set nocompatible
 set wildmode=longest,list,full
 set number relativenumber

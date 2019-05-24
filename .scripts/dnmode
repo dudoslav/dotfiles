@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SUNRISE=6
+SUNSET=20
+
+TIME=`date +%-H`
+
+if (( SUNRISE <= TIME && TIME <= SUNSET )); then
+  sunrise
+else
+  sunset
+fi

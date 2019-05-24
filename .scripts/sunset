@@ -1,5 +1,9 @@
 #!/bin/bash
 
+gsettings set org.gnome.desktop.interface gtk-theme "Sweet-Mars"
+
+gsettings set org.gnome.shell.extensions.user-theme name "Sweet-Mars"
+
 sed -i s'/graphicsset = .*$/graphicsset = "NightGFX"/g' /home/dudoslav/.openttd/openttd.cfg
 
 sed -i s'/colorscheme .*$/colorscheme Crystallite/g' /home/dudoslav/.config/nvim/init.vim

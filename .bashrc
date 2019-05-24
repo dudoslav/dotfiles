@@ -2,12 +2,11 @@
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-
 function lastproc() {
     [ $? = '0' ] && echo 'ok' || echo 'nok'
 }
 
-(automathemely -r 2>&1 > /dev/null &)
+dnmode
 
 export PS1='`echo "\u@\h:\w:$(lastproc) ->" | litify` '
 
