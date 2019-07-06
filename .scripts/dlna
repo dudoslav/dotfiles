@@ -1,0 +1,42 @@
+#!/bin/sh
+
+CONFIG=$(mktemp)
+DB=$(mktemp -u)
+
+{ echo 'inotify=no'
+  echo "db_dir=$DB"
+} >> "$CONFIG"
+
+while [ $# -ne 0 ]; do
+  case $1 in
+    -V)
+      echo "media_dir=V,$2" >> "$CONFIG"
+      shift
+      shift
+      ;;
+    -n)
+      echo "friendly_name=$2" >> "$CONFIG"
+      NAME=yes
+      shift
+      shift
+      ;;
+    *)
+      echo "Unknown flag: $1"
+      exit 1
+      ;;
+  esac
+done
+[ -z $NAME ] && echo "friendly_name=ShellDLNA" >> "$CONFIG"
+
+echo 'Starting minidlna with config:'
+cat "$CONFIG"
+
+minidlnad -d -R -f "$CONFIG" &
+PROC=$!
+read -r _
+echo 'Killing minidlnad'
+kill $PROC
+
+echo 'Removing temp files'
+rm "$CONFIG"
+rm -rf "$DB"

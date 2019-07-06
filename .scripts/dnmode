@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SUNRISE=6
-SUNSET=20
+SUNSET=18
 
 TIME=`date +%-H`
 

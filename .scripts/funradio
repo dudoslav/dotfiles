@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpv http://stream.funradio.sk:8000/fun128.ogg

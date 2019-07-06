@@ -6,4 +6,6 @@ gsettings set org.gnome.shell.extensions.user-theme name "Sweet"
 
 sed -i s'/graphicsset = .*$/graphicsset = "OpenGFX"/g' /home/dudoslav/.openttd/openttd.cfg
 
-sed -i s'/colorscheme .*$/colorscheme morning/g' /home/dudoslav/.config/nvim/init.vim
+sed -i s'/colorscheme .*$/colorscheme morning/g' /home/dudoslav/.vimrc
+
+xrdb -merge .Xsunrise

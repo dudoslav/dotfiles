@@ -6,4 +6,6 @@ gsettings set org.gnome.shell.extensions.user-theme name "Sweet-Mars"
 
 sed -i s'/graphicsset = .*$/graphicsset = "NightGFX"/g' /home/dudoslav/.openttd/openttd.cfg
 
-sed -i s'/colorscheme .*$/colorscheme Crystallite/g' /home/dudoslav/.config/nvim/init.vim
+sed -i s'/colorscheme .*$/colorscheme spacecamp/g' /home/dudoslav/.vimrc
+
+xrdb -merge .Xsunset

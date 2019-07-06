@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mplayer -loop 0 -rootwin -noconsolecontrols -fs ~/Videos/Basshunter\ -\ Dota\ \(8bit\ Version\)-uK8qiElrtqA.mkv 1>/dev/null 2>/dev/null &
+VID=$?
+
+yay
+
+kill $VID

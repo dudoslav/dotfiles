@@ -4,7 +4,7 @@
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-export EDITOR=nvim
+export EDITOR=vim
 export BROWSER=firefox
 
 

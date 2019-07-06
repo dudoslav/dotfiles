@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for PROJECT in ~/Projects/*; do
+  MODIFIED=$(stat -c %Y "$PROJECT")
+  CURRENT=$(date +%s)
+  DAYS=$(((CURRENT - MODIFIED) / 60 / 60 / 24))
+  if [ $DAYS -ge 365 ]; then
+    echo "$PROJECT has not been modified in a year, archiving..."
+    mv "$PROJECT" "$HOME/Archive/${PROJECT##*/}"
+  fi
+done

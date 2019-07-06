@@ -2,7 +2,8 @@ let mapleader=" "
 let maplocalleader=","
 
 call plug#begin()
-Plug 'tomsik68/vim-crystallite'
+" Plug 'tomsik68/vim-crystallite'
+Plug 'jaredgorski/SpaceCamp'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'junegunn/goyo.vim'
 
@@ -16,9 +17,13 @@ Plug 'dart-lang/dart-vim-plugin'
 " Pandoc plugins, too complicated
 Plug 'vim-pandoc/vim-pandoc-syntax' 
 Plug 'vim-pandoc/vim-pandoc' 
+
+" Airline for better looks
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-colorscheme morning
+colorscheme spacecamp
 set nocompatible
 set wildmode=longest,list,full
 set number relativenumber
@@ -28,6 +33,8 @@ set shiftwidth=2
 
 " Sets path relative to current file
 " autocmd BufEnter * lcd %:p:h
+
+let g:airline_theme='dark'
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
