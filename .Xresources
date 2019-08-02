@@ -21,7 +21,9 @@
 Xcursor.theme: Google_Cursor
 
 URxvt.perl-ext-common: resize-font
-! URxvt.font: xft:Hasklug Nerd Font Mono:size=14
-URxvt.font: xft:Fira Code:size=16
-URxvt.boldFont: xft:Fira Code:size=16
+URxvt.font: xft:Fira Code:size=14,xft:NotoEmoji Nerd Font:size=14,xft:Iosevanka Nerd Font:size=14
+URxvt.boldFont: xft:Fira Code:size=14
 URxvt.scrollBar: false
+
+! URxvt*transparent: true
+! URxvt*shading: 20

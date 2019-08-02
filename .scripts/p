@@ -1,2 +1,0 @@
-#!/bin/bash
-ls -d ~/Projects/* | dmenu -l 20 -fn 'Fira Code Bold-20' | xargs -r nvim

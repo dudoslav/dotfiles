@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CONFIG=$(mktemp)
-DB=$(mktemp -u)
+DB=$(mktemp -d)
 
 { echo 'inotify=no'
   echo "db_dir=$DB"
@@ -10,6 +10,12 @@ DB=$(mktemp -u)
 while [ $# -ne 0 ]; do
   case $1 in
     -V)
+#     VIDEOS=$2
+#     if [ -f $VIDEOS ]; then
+#       VIDEOS=$(mktemp -d)
+#       ln -s $2 $VIDEOS/$(basename $2) # TODO: check
+#     fi
+#     echo "media_dir=V,$VIDEOS" >> "$CONFIG"
       echo "media_dir=V,$2" >> "$CONFIG"
       shift
       shift

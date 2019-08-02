@@ -1,0 +1,9 @@
+#!/bin/sh
+
+IMAGE=$(mktemp).bmp
+
+import -window root $IMAGE
+convert -scale 5% -scale 2000% $IMAGE RGB:- | \
+  i3lock --raw 1920x1080:rgb --image /dev/stdin
+
+rm $IMAGE

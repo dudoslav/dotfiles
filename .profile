@@ -6,6 +6,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR=vim
 export BROWSER=firefox
-
+export PAGER=most
 
 [ -f ~/.bashrc ] && source "$HOME/.bashrc"
+
+neofetch

@@ -1,3 +1,8 @@
 #!/bin/sh
 
-mpv http://stream.funradio.sk:8000/fun128.ogg
+PIDFILE=/run/user/$(id -u)/funradio.pid
+
+[ -f "$PIDFILE" ] && kill "$(cat $PIDFILE)" && rm $PIDFILE && exit 0
+
+mpv http://stream.funradio.sk:8000/fun128.ogg > /dev/null 2>&1 &
+echo $! > "$PIDFILE"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+LOGFOLDER=~/.logmic
+[ -d $LOGFOLDER ] || mkdir $LOGFOLDER
+
+while true; do
+  FILES=$(ls $LOGFOLDER)
+  [ $(echo $FILES | wc -l) -eq 864 ] && echo $FILES | head -n 1 | xargs rm
+  arecord -d 100 $LOGFOLDER/$(date +%s)
+done

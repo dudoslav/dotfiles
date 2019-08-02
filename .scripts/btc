@@ -1,0 +1,4 @@
+#!/bin/sh
+
+bluetoothctl -- power on
+bluetoothctl -- paired-devices | rofi -dmenu | cut -d " " -f 2 | xargs bluetoothctl -- connect

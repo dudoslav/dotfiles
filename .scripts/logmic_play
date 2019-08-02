@@ -1,0 +1,10 @@
+#!/bin/sh
+
+(
+  cd ~/.logmic
+  (
+    for FILE in *; do
+      echo "$(date -d @$FILE)\t$FILE"
+    done
+  ) | sort | rofi -dmenu | cut -f 2 | xargs aplay
+)

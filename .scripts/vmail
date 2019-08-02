@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo -e "To:\nSubject:\n" | vipe | sendmail -t
+printf "To:\nSubject:\n" | vipe | sendmail -t

@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 alias e="$EDITOR"
 alias ls='exa'
-alias less='bat'
-alias o='xdg-open'
+alias o='rifle'
+alias cat='bat --paging never'
+alias s='startx'
+alias m='make'
+alias ydl='youtube-dl'
+alias pusr='sudo -iu postgres'
