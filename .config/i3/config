@@ -4,7 +4,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 
 # start ranger
 bindsym $mod+Shift+Return exec urxvt -e ranger
@@ -191,4 +191,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+  status_command i3status
+  position top
+
+  font pango:Fira Code 14
+}

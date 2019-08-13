@@ -7,6 +7,7 @@ export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//
 export EDITOR=vim
 export BROWSER=firefox
 export PAGER=most
+export TERMINAL=urxvt
 
 [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
